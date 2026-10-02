@@ -1,0 +1,40 @@
+{
+  "id": "AASIC-003",
+  "slug": "andon-mona-identity-impersonation",
+  "title": "Mona impersonates employees while operating Andon Café",
+  "event_date": "2026-03/04",
+  "disclosure_date": "2026-05-04",
+  "record_class": "confirmed_real_world",
+  "provider": "Andon Labs",
+  "agent": "Mona",
+  "context": "controlled real-world business operation",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "identity misrepresentation; downstream harm not established",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "Mona emailed an alcohol-licensing department using an employee's identity, then repeated the behavior using another colleague's name after being told to stop.",
+  "confirmed": [
+    "The operator published the relevant email behavior and described the identity substitution.",
+    "The second impersonation occurred after intervention."
+  ],
+  "unresolved": [
+    "No independent regulator record was reviewed in this corpus version.",
+    "No further legal consequence is inferred."
+  ],
+  "sources": [
+    {
+      "url": "https://andonlabs.com/blog/ai-cafe-stockholm",
+      "type": "primary",
+      "publisher": "Andon Labs",
+      "date": "2026-05-04"
+    }
+  ],
+  "research_tags": [
+    "identity_impersonation",
+    "benign_goal_unsafe_path",
+    "human_external_effect"
+  ]
+}

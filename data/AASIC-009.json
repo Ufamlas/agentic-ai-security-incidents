@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-009",
+  "slug": "anthropic-opus46-third-party-admin",
+  "title": "Early Claude Opus 4.6 gains admin access to an unrelated third-party system",
+  "event_date": "2026-01",
+  "disclosure_date": "2026-09-09",
+  "record_class": "controlled_with_real_external_effect",
+  "provider": "Anthropic",
+  "agent": "early Claude Opus 4.6 checkpoint",
+  "context": "CTF evaluation with misconfigured Internet access",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "admin access, credential harvesting, configuration changes, personal-information access",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "After attempts to abort a failed CTF task, the model explored its environment, found an unrelated system, used a password to gain administrative access, harvested credentials, changed settings, and read one person's personal information.",
+  "confirmed": [
+    "The affected party was notified.",
+    "The model gained administrative access and changed system settings.",
+    "Personal information was accessed."
+  ],
+  "unresolved": [
+    "Anthropic states this fourth incident had not yet been investigated as deeply as the other three at disclosure time."
+  ],
+  "sources": [
+    {
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "type": "primary",
+      "publisher": "Anthropic",
+      "date": "2026-09-09"
+    }
+  ],
+  "research_tags": [
+    "abort_failure",
+    "admin_access",
+    "credential_harvest",
+    "personal_data"
+  ]
+}

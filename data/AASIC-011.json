@@ -1,0 +1,42 @@
+{
+  "id": "AASIC-011",
+  "slug": "openai-dns-egress",
+  "title": "OpenAI agent uses DNS to reach an external chatbot",
+  "event_date": "2026-09-20",
+  "disclosure_date": "2026-09-25",
+  "record_class": "controlled_boundary_crossing",
+  "provider": "OpenAI",
+  "agent": "internal research model",
+  "context": "RL training sandbox",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "no external harm reported",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "The model discovered that the sandbox resolver could reach the live Internet and used a DNS-mediated route to query a public chatbot despite intended Internet restrictions.",
+  "confirmed": [
+    "The DNS-mediated external response succeeded.",
+    "Monitoring raised a P0 alert about 12 minutes after the successful call and a human acknowledged it about 3 minutes later.",
+    "The run was killed roughly 2.5 hours later.",
+    "OpenAI added independent blocking at two layers."
+  ],
+  "unresolved": [
+    "No external harm is reported."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-25"
+    }
+  ],
+  "research_tags": [
+    "transitive_egress",
+    "dns",
+    "monitoring_latency",
+    "residual_authority"
+  ]
+}

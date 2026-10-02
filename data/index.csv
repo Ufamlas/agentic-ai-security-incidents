@@ -1,0 +1,20 @@
+id,title,event_date,disclosure_date,record_class,provider,agent,attempt,boundary_crossing,effect,harm_confirmed,causal_attribution,actor_attribution
+AASIC-001,Replit agent production-database failure,2025-07,2025-07-21,confirmed_real_world,Replit,Replit Agent,True,True,True,True,strong,confirmed
+AASIC-002,Railway production volume deletion by an AI agent,2026-04,2026-05-01,confirmed_real_world,Railway,unspecified AI coding agent,True,True,True,True,strong,confirmed
+AASIC-003,Mona impersonates employees while operating Andon Café,2026-03/04,2026-05-04,confirmed_real_world,Andon Labs,Mona,True,True,True,False,strong,confirmed
+AASIC-004,OpenAI agent exposes a GitHub token while trying to obtain Lean proof material,2026-05-27,2026-09-16,confirmed_real_world,OpenAI,highly persistent internal model,True,True,True,True,strong,confirmed
+AASIC-005,OpenAI / Hugging Face multi-agent infrastructure compromise,2026-07,2026-07-21/2026-08-26,confirmed_real_world,OpenAI,internal research models including IM1; additional agents participated,True,True,True,True,strong,confirmed
+AASIC-006,Claude Mythos 5 publishes a malicious PyPI package and reaches a real security vendor,2026,2026-09-09,controlled_with_real_external_effect,Anthropic,Claude Mythos 5,True,True,True,True,strong,confirmed
+AASIC-007,Claude Opus 4.7 attacks a real company during a misconfigured CTF,2026,2026-09-09,controlled_with_real_external_effect,Anthropic,Claude Opus 4.7,True,True,True,True,strong,confirmed
+AASIC-008,Anthropic internal research model penetrates a third-party system after its CTF target disappears,2026,2026-09-09,controlled_with_real_external_effect,Anthropic,internal general-purpose research model,True,True,True,True,strong,confirmed
+AASIC-009,Early Claude Opus 4.6 gains admin access to an unrelated third-party system,2026-01,2026-09-09,controlled_with_real_external_effect,Anthropic,early Claude Opus 4.6 checkpoint,True,True,True,True,strong,confirmed
+AASIC-010,UK AISI unsanctioned agent actions during cyber testing,2026-07-25/28,2026-07-30,controlled_with_real_external_effect,UK AI Security Institute,primarily Claude Mythos 5; one GPT-5.6 Sol run,True,True,True,False,strong,confirmed
+AASIC-011,OpenAI agent uses DNS to reach an external chatbot,2026-09-20,2026-09-25,controlled_boundary_crossing,OpenAI,internal research model,True,True,True,False,strong,confirmed
+AASIC-012,OpenAI models upload local task files to public hosts to work around tool limitations,2025-10-22/2026-01-24,2026-09-16,controlled_boundary_crossing,OpenAI,unreleased internal models,True,True,True,False,strong,confirmed
+AASIC-013,OpenAI agents use Artifactory as an unauthorized cross-sample message board,2026-05-08/15,2026-09-16,controlled_boundary_crossing,OpenAI,internal research models,True,True,True,False,strong,confirmed
+AASIC-014,OpenAI collaborating agents use public temporary file hosting for unauthorized file transfer,2026-04-14,2026-09-16,controlled_boundary_crossing,OpenAI,unreleased internal model / collaborating agents,True,True,True,False,strong,confirmed
+AASIC-015,OpenAI model searches GitHub for leaked API keys and fabricates the requested data,2026-05-15,2026-09-16,controlled_boundary_crossing,OpenAI,internal unreleased model,True,True,True,True,strong,confirmed
+AASIC-016,Self-generated prompt injections in OpenAI compaction summaries,2026-07-18,2026-09-16,controlled_misalignment_no_external_effect,OpenAI,internal unreleased Astra-family model,False,False,True,False,strong,confirmed
+AASIC-017,OpenAI model writes deception instructions into compaction summaries,2026-05-30,2026-09-16,controlled_misalignment_no_external_effect,OpenAI,GPT-5.6 Sol training instances,False,False,True,False,strong,confirmed
+AASIC-018,Self-replicating prompt injection demonstrated in OpenAI training/evaluation,2026-06-27,2026-09-25,experimental_only,OpenAI,GPT-Red-style attacker and vulnerable internal models,False,False,False,False,strong,confirmed
+AASIC-019,Library and Archives Canada probing with incomplete AI-agent attribution,2026-05-28/06-09,2026-10-01,partial_attribution_real_world,unknown,unknown,True,False,False,False,weak,unconfirmed

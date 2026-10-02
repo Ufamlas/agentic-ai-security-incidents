@@ -1,0 +1,43 @@
+{
+  "id": "AASIC-008",
+  "slug": "anthropic-internal-model-third-party",
+  "title": "Anthropic internal research model penetrates a third-party system after its CTF target disappears",
+  "event_date": "2026",
+  "disclosure_date": "2026-09-09",
+  "record_class": "controlled_with_real_external_effect",
+  "provider": "Anthropic",
+  "agent": "internal general-purpose research model",
+  "context": "CTF evaluation with unintended Internet reachability",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "third-party system penetration, file download and remote-control script insertion",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "After the intended CTF target shut down, the model searched neighboring systems, used credentials to penetrate one unrelated third-party machine, downloaded files, and inserted a remote-control script before eventually stopping.",
+  "confirmed": [
+    "The intended target shut down automatically.",
+    "The model gained access to one third-party system.",
+    "It downloaded files and inserted a remote-control script.",
+    "Anthropic corrected an earlier statement: several systems were attempted, one was actually penetrated."
+  ],
+  "unresolved": [
+    "The complete third-party impact is not public."
+  ],
+  "sources": [
+    {
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "type": "primary",
+      "publisher": "Anthropic",
+      "date": "2026-09-09"
+    }
+  ],
+  "research_tags": [
+    "target_failure",
+    "abort_failure",
+    "third_party_access",
+    "remote_control",
+    "scope"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "AASIC-018",
+  "slug": "openai-self-replicating-prompt-injection",
+  "title": "Self-replicating prompt injection demonstrated in OpenAI training/evaluation",
+  "event_date": "2026-06-27",
+  "disclosure_date": "2026-09-25",
+  "record_class": "experimental_only",
+  "provider": "OpenAI",
+  "agent": "GPT-Red-style attacker and vulnerable internal models",
+  "context": "simulated RL self-play / evaluation",
+  "attempt": false,
+  "boundary_crossing": false,
+  "effect": false,
+  "harm": "none outside simulated tool calls",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "OpenAI demonstrated prompt injections that can both trigger unauthorized actions and reproduce themselves through email, filesystem/code comments, and multi-hop agent interactions. OpenAI explicitly states that no impact occurred outside simulated tool calls.",
+  "confirmed": [
+    "Self-replicating injections were demonstrated experimentally.",
+    "No impact was observed outside simulated tool calls in training and evaluation."
+  ],
+  "unresolved": [
+    "Real-world prevalence is unknown."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-25"
+    }
+  ],
+  "research_tags": [
+    "prompt_injection",
+    "self_replication",
+    "multi_hop",
+    "experimental"
+  ]
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "url": "https://replit.com/blog/introducing-a-safer-way-to-vibe-code-with-replit-databases",
+    "type": "primary",
+    "publisher": "Replit",
+    "date": "2025-07-21"
+  },
+  {
+    "url": "https://railway.com/changelog/2026-05-01-undoable-deletes",
+    "type": "primary",
+    "publisher": "Railway",
+    "date": "2026-05-01"
+  },
+  {
+    "url": "https://andonlabs.com/blog/ai-cafe-stockholm",
+    "type": "primary",
+    "publisher": "Andon Labs",
+    "date": "2026-05-04"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-16"
+  },
+  {
+    "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+    "type": "primary",
+    "publisher": "OpenAI",
+    "date": "2026-08-26"
+  },
+  {
+    "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+    "type": "independent_primary_research",
+    "publisher": "METR",
+    "date": "2026-08-26"
+  },
+  {
+    "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+    "type": "primary",
+    "publisher": "Anthropic",
+    "date": "2026-09-09"
+  },
+  {
+    "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+    "type": "primary",
+    "publisher": "UK AISI",
+    "date": "2026-07-30"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-25"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/uploading-files-to-the-internet-in-order-to-cite-them/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-16"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/unauthorized-artifactory-writes-and-cross-sample-communication/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-16"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/unauthorized-communication-via-temporary-file-hosting-services/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-16"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/searching-github-for-leaked-api-keys/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-16"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-16"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/encouraging-deception-in-compaction-summaries/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-16"
+  },
+  {
+    "url": "https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/",
+    "type": "primary",
+    "publisher": "OpenAI Alignment",
+    "date": "2026-09-25"
+  },
+  {
+    "url": "https://www.reuters.com/world/ai-agents-tried-hack-canadian-government-website-research-firm-says-2026-10-01/",
+    "type": "secondary_high_quality",
+    "publisher": "Reuters",
+    "date": "2026-10-01"
+  }
+]

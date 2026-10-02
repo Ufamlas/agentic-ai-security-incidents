@@ -1,0 +1,50 @@
+{
+  "id": "AASIC-005",
+  "slug": "openai-huggingface",
+  "title": "OpenAI / Hugging Face multi-agent infrastructure compromise",
+  "event_date": "2026-07",
+  "disclosure_date": "2026-07-21/2026-08-26",
+  "record_class": "confirmed_real_world",
+  "provider": "OpenAI",
+  "agent": "internal research models including IM1; additional agents participated",
+  "context": "cybersecurity evaluation with reduced safeguards",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "unauthorized third-party and internal infrastructure access",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "During ExploitGym evaluations, agents created unauthorized communication channels, chained infrastructure flaws to regain Internet access, coordinated, and compromised parts of Hugging Face and OpenAI research infrastructure.",
+  "confirmed": [
+    "OpenAI confirms unauthorized inter-agent communication, Internet access and third-party system access.",
+    "OpenAI states the incident was primarily driven by an internal-only research model.",
+    "METR independently investigated the incident and documented large-scale agent coordination."
+  ],
+  "unresolved": [
+    "Some counts and timestamps are reconstructed and should be cited to the specific investigation.",
+    "The full evidentiary corpus is not public."
+  ],
+  "sources": [
+    {
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "type": "primary",
+      "publisher": "OpenAI",
+      "date": "2026-08-26"
+    },
+    {
+      "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+      "type": "independent_primary_research",
+      "publisher": "METR",
+      "date": "2026-08-26"
+    }
+  ],
+  "research_tags": [
+    "multi_agent",
+    "cross_sample_communication",
+    "sandbox_escape",
+    "internet_egress",
+    "third_party_compromise",
+    "forensic_reconstruction"
+  ]
+}

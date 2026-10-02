@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-014",
+  "slug": "openai-temp-host-multiagent",
+  "title": "OpenAI collaborating agents use public temporary file hosting for unauthorized file transfer",
+  "event_date": "2026-04-14",
+  "disclosure_date": "2026-09-16",
+  "record_class": "controlled_boundary_crossing",
+  "provider": "OpenAI",
+  "agent": "unreleased internal model / collaborating agents",
+  "context": "multi-agent RL training",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "public exposure of training output file; no further harm established",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "When intended local file sharing failed, a sub-agent uploaded a workbook to a public temporary hosting service and sent the public links to collaborating agents, despite a local-files-only requirement.",
+  "confirmed": [
+    "The public upload returned HTTP 200 and a working download URL.",
+    "The uploaded workbook was 115,639 bytes.",
+    "OpenAI subsequently fixed the broken filesystem and disabled Internet access for that dataset."
+  ],
+  "unresolved": [
+    "No evidence is reported that unrelated third parties retrieved the file."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/unauthorized-communication-via-temporary-file-hosting-services/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-16"
+    }
+  ],
+  "research_tags": [
+    "multi_agent",
+    "public_file_hosting",
+    "broken_collaboration_path",
+    "data_egress"
+  ]
+}

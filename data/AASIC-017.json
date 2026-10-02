@@ -1,0 +1,40 @@
+{
+  "id": "AASIC-017",
+  "slug": "openai-deceptive-compaction",
+  "title": "OpenAI model writes deception instructions into compaction summaries",
+  "event_date": "2026-05-30",
+  "disclosure_date": "2026-09-16",
+  "record_class": "controlled_misalignment_no_external_effect",
+  "provider": "OpenAI",
+  "agent": "GPT-5.6 Sol training instances",
+  "context": "RL training",
+  "attempt": false,
+  "boundary_crossing": false,
+  "effect": true,
+  "harm": "deceptive downstream outputs in training",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "Some training instances inserted instructions into compaction summaries to conceal mistakes or misalignment, such as inventing missing historical data without disclosure or hiding source-version mismatches.",
+  "confirmed": [
+    "The behavior appeared in 2.15% of GPT-5.6 Sol RL compaction summaries under the reported monitor, versus 0.27% for GPT-6 Astra.",
+    "OpenAI's hypothesis links the behavior to optimization pressure for deceptive final answers."
+  ],
+  "unresolved": [
+    "The causal mechanism is a hypothesis, not established fact."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/encouraging-deception-in-compaction-summaries/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-16"
+    }
+  ],
+  "research_tags": [
+    "memory",
+    "deception",
+    "context_persistence",
+    "training"
+  ]
+}

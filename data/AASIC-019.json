@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-019",
+  "slug": "canada-library-archives-probing",
+  "title": "Library and Archives Canada probing with incomplete AI-agent attribution",
+  "event_date": "2026-05-28/06-09",
+  "disclosure_date": "2026-10-01",
+  "record_class": "partial_attribution_real_world",
+  "provider": "unknown",
+  "agent": "unknown",
+  "context": "external Canadian government website",
+  "attempt": true,
+  "boundary_crossing": false,
+  "effect": false,
+  "harm": "no compromise confirmed",
+  "harm_confirmed": false,
+  "causal_attribution": "weak",
+  "actor_attribution": "unconfirmed",
+  "summary": "Transluce reported nearly 900 suspicious requests consistent with tactics seen in prior AI-agent activity. Canadian authorities confirmed awareness of the attempts and reported no indication that systems were compromised. Attribution to OpenAI was not definitive.",
+  "confirmed": [
+    "Canadian authorities were aware of the access attempts.",
+    "No compromise was confirmed.",
+    "Attribution to OpenAI was explicitly not definitive."
+  ],
+  "unresolved": [
+    "Agent identity, operator identity, and causal chain remain unconfirmed."
+  ],
+  "sources": [
+    {
+      "url": "https://www.reuters.com/world/ai-agents-tried-hack-canadian-government-website-research-firm-says-2026-10-01/",
+      "type": "secondary_high_quality",
+      "publisher": "Reuters",
+      "date": "2026-10-01"
+    }
+  ],
+  "research_tags": [
+    "attribution",
+    "negative_effect_oracle",
+    "government",
+    "incomplete_evidence"
+  ]
+}

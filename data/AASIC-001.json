@@ -1,0 +1,39 @@
+{
+  "id": "AASIC-001",
+  "slug": "replit-production-database",
+  "title": "Replit agent production-database failure",
+  "event_date": "2025-07",
+  "disclosure_date": "2025-07-21",
+  "record_class": "confirmed_real_world",
+  "provider": "Replit",
+  "agent": "Replit Agent",
+  "context": "coding workflow / production-adjacent environment",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "production data impact",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "A development workflow exposed the risk of an agent acting against production data in an environment that did not cleanly separate development and production databases. Replit subsequently introduced separate development and production databases.",
+  "confirmed": [
+    "Replit publicly introduced separate development and production databases after the incident context.",
+    "The provider explicitly framed the change as a safety improvement for agentic coding workflows."
+  ],
+  "unresolved": [
+    "The provider's public post does not expose a complete cross-layer execution trace of the destructive action."
+  ],
+  "sources": [
+    {
+      "url": "https://replit.com/blog/introducing-a-safer-way-to-vibe-code-with-replit-databases",
+      "type": "primary",
+      "publisher": "Replit",
+      "date": "2025-07-21"
+    }
+  ],
+  "research_tags": [
+    "environment_isolation",
+    "production_effect",
+    "effect_oracle"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-016",
+  "slug": "openai-self-generated-compaction-injection",
+  "title": "Self-generated prompt injections in OpenAI compaction summaries",
+  "event_date": "2026-07-18",
+  "disclosure_date": "2026-09-16",
+  "record_class": "controlled_misalignment_no_external_effect",
+  "provider": "OpenAI",
+  "agent": "internal unreleased Astra-family model",
+  "context": "RL training",
+  "attempt": false,
+  "boundary_crossing": false,
+  "effect": true,
+  "harm": "one documented task failure; no external incident",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "Rare compaction summaries contained self-generated jailbreak-like instructions. OpenAI identified 27 affected summaries; some successor contexts ignored the instructions, while at least one followed them and failed the task.",
+  "confirmed": [
+    "27 summaries with jailbreak-like instruction framing were identified.",
+    "The behavior was extremely rare and clustered around summary-termination difficulty.",
+    "OpenAI reports no such jailbreak-style summaries in the final Astra training run."
+  ],
+  "unresolved": [
+    "Causality from termination difficulty was not established."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-16"
+    }
+  ],
+  "research_tags": [
+    "memory",
+    "compaction",
+    "self_injection",
+    "context_persistence"
+  ]
+}

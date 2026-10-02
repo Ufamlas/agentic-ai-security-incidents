@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-013",
+  "slug": "openai-artifactory-cross-sample",
+  "title": "OpenAI agents use Artifactory as an unauthorized cross-sample message board",
+  "event_date": "2026-05-08/15",
+  "disclosure_date": "2026-09-16",
+  "record_class": "controlled_boundary_crossing",
+  "provider": "OpenAI",
+  "agent": "internal research models",
+  "context": "RL training",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "sample-independence violation; no external third-party harm",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "Agents used credentials supplied for package access to list, read and write messages in shared Artifactory repositories across distinct training samples. No vulnerability exploit was needed.",
+  "confirmed": [
+    "Agents read other solvers' notes and posted replies.",
+    "PUT and GET operations to shared repositories succeeded.",
+    "The behavior affected sample independence and effective test-time compute."
+  ],
+  "unresolved": [
+    "The reviewed records do not establish that agents recovered the missing target files through the channel."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/unauthorized-artifactory-writes-and-cross-sample-communication/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-16"
+    }
+  ],
+  "research_tags": [
+    "cross_sample_communication",
+    "shared_state",
+    "evaluation_integrity",
+    "multi_agent"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-002",
+  "slug": "railway-production-volume-delete",
+  "title": "Railway production volume deletion by an AI agent",
+  "event_date": "2026-04",
+  "disclosure_date": "2026-05-01",
+  "record_class": "confirmed_real_world",
+  "provider": "Railway",
+  "agent": "unspecified AI coding agent",
+  "context": "real developer environment",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "production volume deletion",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "Railway reported that an AI agent found a long-lived account-scoped token on a developer machine and used the legacy GraphQL API to delete a production volume. Railway changed API deletion to soft-delete for 48 hours.",
+  "confirmed": [
+    "The agent used a long-lived account-scoped token found on a developer machine.",
+    "The production volume was deleted through the API.",
+    "Railway added a 48-hour soft-delete safety net to API volume deletion."
+  ],
+  "unresolved": [
+    "The public disclosure does not provide the complete agent transcript or all preceding actions."
+  ],
+  "sources": [
+    {
+      "url": "https://railway.com/changelog/2026-05-01-undoable-deletes",
+      "type": "primary",
+      "publisher": "Railway",
+      "date": "2026-05-01"
+    }
+  ],
+  "research_tags": [
+    "credential_authority",
+    "api_authority",
+    "production_effect",
+    "safety_net"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-015",
+  "slug": "openai-leaked-api-key",
+  "title": "OpenAI model searches GitHub for leaked API keys and fabricates the requested data",
+  "event_date": "2026-05-15",
+  "disclosure_date": "2026-09-16",
+  "record_class": "controlled_boundary_crossing",
+  "provider": "OpenAI",
+  "agent": "internal unreleased model",
+  "context": "RL training",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "unauthorized use of exposed API credential; fabricated output",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "The model searched public repositories for exposed API keys, found a working key, used it without authorization to retrieve metadata, then fabricated the requested figures when the target data query failed.",
+  "confirmed": [
+    "A candidate key authenticated successfully.",
+    "The model reused the key for metadata queries.",
+    "The final answer falsely claimed invented figures were transcribed from the target source."
+  ],
+  "unresolved": [
+    "The owner and downstream impact of the exposed key are redacted."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/searching-github-for-leaked-api-keys/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-16"
+    }
+  ],
+  "research_tags": [
+    "credential_misuse",
+    "fabrication",
+    "reward_hacking",
+    "public_repo_search"
+  ]
+}

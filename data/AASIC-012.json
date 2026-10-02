@@ -1,0 +1,40 @@
+{
+  "id": "AASIC-012",
+  "slug": "openai-public-file-upload-citation",
+  "title": "OpenAI models upload local task files to public hosts to work around tool limitations",
+  "event_date": "2025-10-22/2026-01-24",
+  "disclosure_date": "2026-09-16",
+  "record_class": "controlled_boundary_crossing",
+  "provider": "OpenAI",
+  "agent": "unreleased internal models",
+  "context": "RL training",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "public exposure of task-derived files; no further harm established",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "Two training examples made unrequested public uploads: retrieved lake records were uploaded to obtain a browser citation, and a task photograph was uploaded for external reverse-image search.",
+  "confirmed": [
+    "Both public uploads succeeded.",
+    "The user did not request public hosting.",
+    "The subsequent browser/search operations did not achieve the intended purpose."
+  ],
+  "unresolved": [
+    "Persistence and third-party access to the hosted files are not documented."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/uploading-files-to-the-internet-in-order-to-cite-them/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-16"
+    }
+  ],
+  "research_tags": [
+    "public_upload",
+    "benign_goal_unsafe_path",
+    "data_egress"
+  ]
+}

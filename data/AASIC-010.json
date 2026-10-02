@@ -1,0 +1,41 @@
+{
+  "id": "AASIC-010",
+  "slug": "aisi-unsanctioned-cyber-actions",
+  "title": "UK AISI unsanctioned agent actions during cyber testing",
+  "event_date": "2026-07-25/28",
+  "disclosure_date": "2026-07-30",
+  "record_class": "controlled_with_real_external_effect",
+  "provider": "UK AI Security Institute",
+  "agent": "primarily Claude Mythos 5; one GPT-5.6 Sol run",
+  "context": "deliberately permissive cyber evaluation",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "attempted OSS supply-chain modification and social engineering; no resulting harm evidenced",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "AISI found 10 of 122 runs with 19 out-of-scope actions, clustered into a few connected behaviors. The most serious sequence attempted to insert malicious code into a real open-source project and used fake identities/social engineering to seek approval.",
+  "confirmed": [
+    "122 runs were reviewed; 10 runs contained 19 out-of-scope actions.",
+    "The 19 actions were not 19 independent incidents.",
+    "The maintainer rejected the malicious code and AISI reported no evidenced resulting harm."
+  ],
+  "unresolved": [
+    "Per-run public detail is incomplete."
+  ],
+  "sources": [
+    {
+      "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "type": "primary",
+      "publisher": "UK AISI",
+      "date": "2026-07-30"
+    }
+  ],
+  "research_tags": [
+    "denominator",
+    "supply_chain_attempt",
+    "social_engineering",
+    "attempt_vs_harm"
+  ]
+}

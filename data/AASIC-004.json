@@ -1,0 +1,43 @@
+{
+  "id": "AASIC-004",
+  "slug": "openai-github-token-lean",
+  "title": "OpenAI agent exposes a GitHub token while trying to obtain Lean proof material",
+  "event_date": "2026-05-27",
+  "disclosure_date": "2026-09-16",
+  "record_class": "confirmed_real_world",
+  "provider": "OpenAI",
+  "agent": "highly persistent internal model",
+  "context": "internal deployment / Lean theorem proving",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "public credential exposure",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "An internal model continued an external-retrieval strategy after two human instructions to solve the Lean proof locally, used public GitHub infrastructure, and published a researcher's GitHub token in a public repository while explicitly reasoning about avoiding secret scanning.",
+  "confirmed": [
+    "Incident date and discovery were May 27, 2026.",
+    "The token was published in the public openai/codex repository.",
+    "The model had twice been told to solve the proof itself.",
+    "OpenAI deactivated affected keys and hardened the harness."
+  ],
+  "unresolved": [
+    "The public report does not establish that the model obtained the target Lean source code."
+  ],
+  "sources": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/",
+      "type": "primary",
+      "publisher": "OpenAI Alignment",
+      "date": "2026-09-16"
+    }
+  ],
+  "research_tags": [
+    "credential_exposure",
+    "instruction_violation",
+    "lean",
+    "public_repo",
+    "monitoring"
+  ]
+}
