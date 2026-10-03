@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AASIC Incident Explorer</title>
+<meta name="description" content="Interactive explorer for the Agentic AI Security Incident Corpus (AASIC).">
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#f6f7f9;--panel:#fff;--text:#17202a;--muted:#667085;--border:#d9dee7;
+  --accent:#2457d6;--soft:#eef3ff;--danger:#a33;--ok:#216e4e;--warn:#9a6700;
+}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#101318;--panel:#171b22;--text:#edf0f5;--muted:#a9b1bd;--border:#303744;--accent:#84a8ff;--soft:#1d2944;--danger:#ff9b9b;--ok:#87d7b2;--warn:#f2cd6d}
+}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
+main{max-width:1280px;margin:auto;padding:28px 20px 60px}
+header{display:flex;gap:24px;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;margin-bottom:24px}
+h1{font-size:clamp(1.7rem,4vw,2.7rem);line-height:1.05;margin:0 0 8px}
+.subtitle{max-width:850px;color:var(--muted);margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(110px,1fr));gap:10px;margin:20px 0}
+.stat{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px}
+.stat strong{display:block;font-size:1.6rem}
+.stat span{color:var(--muted);font-size:.85rem}
+.controls{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:18px}
+.controlgrid{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:12px}
+label{font-size:.82rem;color:var(--muted);display:block;margin-bottom:5px}
+input,select{width:100%;min-height:42px;border-radius:9px;border:1px solid var(--border);background:var(--bg);color:var(--text);padding:8px 10px;font:inherit}
+.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap}
+button{min-height:40px;border:1px solid var(--border);border-radius:9px;background:var(--panel);color:var(--text);padding:8px 12px;cursor:pointer}
+button:hover{border-color:var(--accent)}
+.count{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;min-width:0}
+.card-head{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;color:var(--accent)}
+.card h2{font-size:1.05rem;line-height:1.3;margin:4px 0 8px}
+.meta{color:var(--muted);font-size:.85rem}
+.summary{margin:12px 0}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.badge{font-size:.75rem;border:1px solid var(--border);border-radius:999px;padding:3px 7px}
+.badge.effect{color:var(--ok)}
+.badge.harm{color:var(--danger)}
+.badge.partial{color:var(--warn)}
+.links{display:flex;gap:12px;margin-top:12px;font-size:.88rem}
+a{color:var(--accent)}
+.empty{padding:40px;text-align:center;color:var(--muted);background:var(--panel);border:1px solid var(--border);border-radius:12px}
+.legend{font-size:.82rem;color:var(--muted);margin-top:24px}
+@media(max-width:900px){.controlgrid{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){main{padding:20px 12px 40px}.controlgrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <div class="id">AASIC · v0.3-research</div>
+    <h1>Agentic AI Security Incident Explorer</h1>
+    <p class="subtitle">Browse evidence-bounded incident records without collapsing attempt, boundary crossing, realized effect, harm, causal attribution, and actor attribution into a single “rogue AI” label.</p>
+  </div>
+</header>
+
+<section class="stats" aria-label="Corpus summary">
+  <div class="stat"><strong id="s-total">0</strong><span>records</span></div>
+  <div class="stat"><strong id="s-confirmed">0</strong><span>real-world / real external effect</span></div>
+  <div class="stat"><strong id="s-harm">0</strong><span>confirmed harm/effect impact</span></div>
+  <div class="stat"><strong id="s-partial">0</strong><span>partial / unresolved attribution</span></div>
+</section>
+
+<section class="controls" aria-label="Incident filters">
+  <div class="controlgrid">
+    <div><label for="q">Search</label><input id="q" type="search" placeholder="ID, title, provider, agent, tag…"></div>
+    <div><label for="cls">Class</label><select id="cls"><option value="">All classes</option></select></div>
+    <div><label for="provider">Provider</label><select id="provider"><option value="">All providers</option></select></div>
+    <div><label for="harm">Harm</label><select id="harm"><option value="">Any</option><option value="yes">Confirmed</option><option value="no">Not confirmed</option></select></div>
+    <div><label for="attrib">Actor attribution</label><select id="attrib"><option value="">Any</option></select></div>
+  </div>
+  <div class="toolbar">
+    <span class="count" id="resultCount" aria-live="polite"></span>
+    <button id="reset" type="button">Reset filters</button>
+  </div>
+</section>
+
+<section id="cards" class="grid" aria-live="polite"></section>
+<p class="legend">The dashboard is a view over the repository data. It is not a severity ranking and the corpus count is not an estimate of incident prevalence.</p>
+</main>
+<script src="incidents.js"></script>
+<script>
+(() => {
+ const rows = Array.isArray(window.AASIC_INCIDENTS) ? window.AASIC_INCIDENTS : [];
+ const $ = id => document.getElementById(id);
+ const els = {q:$("q"),cls:$("cls"),provider:$("provider"),harm:$("harm"),attrib:$("attrib"),cards:$("cards"),count:$("resultCount")};
+ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+ const pretty=s=>String(s||"").replaceAll("_"," ").replace(/\b\w/g,c=>c.toUpperCase());
+ const unique=k=>[...new Set(rows.map(r=>r[k]).filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b)));
+ for(const v of unique("record_class")) els.cls.insertAdjacentHTML("beforeend",`<option value="${esc(v)}">${esc(pretty(v))}</option>`);
+ for(const v of unique("provider")) els.provider.insertAdjacentHTML("beforeend",`<option value="${esc(v)}">${esc(v)}</option>`);
+ for(const v of unique("actor_attribution")) els.attrib.insertAdjacentHTML("beforeend",`<option value="${esc(v)}">${esc(pretty(v))}</option>`);
+ $("s-total").textContent=rows.length;
+ $("s-confirmed").textContent=rows.filter(r=>["confirmed_real_world","controlled_with_real_external_effect"].includes(r.record_class)).length;
+ $("s-harm").textContent=rows.filter(r=>r.harm_confirmed).length;
+ $("s-partial").textContent=rows.filter(r=>["partial","unconfirmed"].includes(r.actor_attribution)||r.record_class==="partial_attribution_real_world").length;
+
+ function render(){
+   const q=els.q.value.trim().toLowerCase();
+   let out=rows.filter(r=>{
+     const hay=[r.id,r.title,r.provider,r.agent,r.summary,r.harm,...(r.tags||[])].join(" ").toLowerCase();
+     return (!q||hay.includes(q))
+       &&(!els.cls.value||r.record_class===els.cls.value)
+       &&(!els.provider.value||r.provider===els.provider.value)
+       &&(!els.attrib.value||r.actor_attribution===els.attrib.value)
+       &&(!els.harm.value||(els.harm.value==="yes" ? r.harm_confirmed : !r.harm_confirmed));
+   }).sort((a,b)=>String(b.event_date).localeCompare(String(a.event_date))||a.id.localeCompare(b.id));
+   els.count.textContent=`${out.length} of ${rows.length} records`;
+   if(!out.length){els.cards.innerHTML='<div class="empty">No incidents match the current filters.</div>';return}
+   els.cards.innerHTML=out.map(r=>{
+     const badges=[
+       `<span class="badge">${esc(pretty(r.record_class))}</span>`,
+       r.effect?'<span class="badge effect">Realized effect</span>':'',
+       r.harm_confirmed?'<span class="badge harm">Harm confirmed</span>':'',
+       ["partial","unconfirmed"].includes(r.actor_attribution)?'<span class="badge partial">Attribution unresolved</span>':''
+     ].join("");
+     return `<article class="card">
+       <div class="card-head"><div><div class="id">${esc(r.id)}</div><h2>${esc(r.title)}</h2></div><div class="meta">${esc(r.event_date)}</div></div>
+       <div class="meta">${esc(r.provider)} · ${esc(r.agent)}</div>
+       <p class="summary">${esc(r.summary)}</p>
+       <div class="badges">${badges}</div>
+       <div class="links"><a href="${esc(r.report_path)}">Independent report</a></div>
+     </article>`;
+   }).join("");
+ }
+ ["input","change"].forEach(ev=>document.querySelector(".controls").addEventListener(ev,render));
+ $("reset").addEventListener("click",()=>{els.q.value="";els.cls.value="";els.provider.value="";els.harm.value="";els.attrib.value="";render();});
+ render();
+})();
+</script>
+</body>
+</html>
