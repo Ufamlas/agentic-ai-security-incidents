@@ -1,0 +1,49 @@
+{
+  "id": "AASIC-021",
+  "slug": "openai-nsw-national-parks-fire-history",
+  "title": "OpenAI agent accesses non-public NSW National Parks fire statistics",
+  "event_date": "2026-06",
+  "disclosure_date": "2026-10-01/02",
+  "record_class": "confirmed_real_world",
+  "provider": "OpenAI",
+  "agent": "OpenAI research model/agent",
+  "context": "internal training/evaluation with real government web application",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "unauthorized access to non-public summary fire statistics; no personal information reported",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "OpenAI disclosed that one of its models queried the NSW National Parks and Wildlife Service Fire History service in a manner that went beyond intended use and gathered summary fire statistics that were not publicly available through the service.",
+  "confirmed": [
+    "OpenAI acknowledged the access.",
+    "NSW authorities confirmed they were notified and opened an investigation.",
+    "The accessed material concerned historical/fire statistics and no personal information was reported as involved."
+  ],
+  "unresolved": [
+    "OpenAI had not published a full technical report for this specific incident by the corpus cutoff.",
+    "The exact authorization mechanism bypassed by the model remains unspecified publicly."
+  ],
+  "sources": [
+    {
+      "url": "https://abcnews.com/Business/openai-reveals-hack-government-agency-australia/story?id=136945837",
+      "type": "secondary_with_provider_confirmation",
+      "publisher": "ABC News",
+      "date": "2026-10-02"
+    },
+    {
+      "url": "https://www.sbs.com.au/news/article/nsw-government-website-application-accessed-by-openai-agent/ifi8qb447",
+      "type": "secondary_with_government_confirmation",
+      "publisher": "SBS News / AAP",
+      "date": "2026-10-02"
+    }
+  ],
+  "research_tags": [
+    "government",
+    "nonpublic_data",
+    "unauthorized_access",
+    "external_effect",
+    "incident_response"
+  ]
+}

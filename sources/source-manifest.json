@@ -100,5 +100,131 @@
     "type": "secondary_high_quality",
     "publisher": "Reuters",
     "date": "2026-10-01"
+  },
+  {
+    "url": "https://www.pm.gov.au/media/press-conference-new-york",
+    "type": "primary_government",
+    "publisher": "Prime Minister of Australia",
+    "date": "2026-09-24"
+  },
+  {
+    "url": "https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney",
+    "type": "primary_government",
+    "publisher": "Australian Government / Defence Ministers",
+    "date": "2026-09-24"
+  },
+  {
+    "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+    "type": "primary_provider",
+    "publisher": "OpenAI",
+    "date": "2026-09-28"
+  },
+  {
+    "url": "https://abcnews.com/Business/openai-reveals-hack-government-agency-australia/story?id=136945837",
+    "type": "secondary_with_provider_confirmation",
+    "publisher": "ABC News",
+    "date": "2026-10-02"
+  },
+  {
+    "url": "https://www.sbs.com.au/news/article/nsw-government-website-application-accessed-by-openai-agent/ifi8qb447",
+    "type": "secondary_with_government_confirmation",
+    "publisher": "SBS News / AAP",
+    "date": "2026-10-02"
+  },
+  {
+    "url": "https://apnews.com/article/df331b55daffc6d202d8e2f6d0afa264",
+    "type": "high_quality_secondary_with_provider_and_agency_statements",
+    "publisher": "Associated Press",
+    "date": "2026-09-26"
+  },
+  {
+    "url": "https://www.washingtonpost.com/technology/2026/09/25/openais-ai-agents-probed-federal-agencies-including-commerce-department/",
+    "type": "high_quality_secondary",
+    "publisher": "The Washington Post",
+    "date": "2026-09-25"
+  },
+  {
+    "url": "https://aws.amazon.com/security/security-bulletins/AWS-2025-019/",
+    "type": "primary_security_bulletin",
+    "publisher": "AWS",
+    "date": "2025-10-07"
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli/issues/15822",
+    "type": "user_report_github_issue",
+    "publisher": "GitHub / google-gemini",
+    "date": "2026-01-02"
+  },
+  {
+    "url": "https://discuss.ai.google.dev/t/title-antigravity-agent-data-loss-a-month-of-saas-and-client-work-deleted-windows/186177",
+    "type": "user_report_forum",
+    "publisher": "Google AI Developers Forum",
+    "date": "2026-09-30"
+  },
+  {
+    "url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+    "type": "primary_affected_organization",
+    "publisher": "Wikimedia Foundation",
+    "date": "2026-10-05"
+  },
+  {
+    "url": "https://openai.com/hugging-face-incident-and-misalignment/",
+    "type": "primary_provider",
+    "publisher": "OpenAI",
+    "date": "2026-09-25"
+  },
+  {
+    "url": "https://www.reuters.com/business/gemini-hacked-three-companies-first-known-breakout-by-google-ai-wsj-reports-2026-09-18/",
+    "type": "high_quality_secondary_with_provider_confirmation",
+    "publisher": "Reuters",
+    "date": "2026-09-18"
+  },
+  {
+    "url": "https://www.reuters.com/technology/metas-ai-model-hacked-another-company-during-testing-information-reports-2026-08-05/",
+    "type": "high_quality_secondary_with_provider_confirmation",
+    "publisher": "Reuters",
+    "date": "2026-08-05"
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/",
+    "type": "specialist_secondary",
+    "publisher": "BleepingComputer",
+    "date": "2026-08-06"
+  },
+  {
+    "url": "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/",
+    "type": "independent_technical_investigation",
+    "publisher": "Asymmetric Security",
+    "date": "2026-10-01"
+  },
+  {
+    "url": "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/",
+    "type": "primary_threat_intelligence",
+    "publisher": "CrowdStrike",
+    "date": "2026-10-07"
+  },
+  {
+    "url": "https://github.com/anthropics/claude-code/issues/95426",
+    "type": "user_report_github_issue",
+    "publisher": "GitHub / anthropics/claude-code",
+    "date": "2026-09-18"
+  },
+  {
+    "url": "https://github.com/anthropics/claude-code/issues/83058",
+    "type": "user_report_github_issue",
+    "publisher": "GitHub / anthropics/claude-code",
+    "date": "2026-08-01"
+  },
+  {
+    "url": "https://github.com/anthropics/claude-code/issues/75859",
+    "type": "user_report_github_issue",
+    "publisher": "GitHub / anthropics/claude-code",
+    "date": "2026-07-08"
+  },
+  {
+    "url": "https://forum.cursor.com/t/errible-ai-out-of-control-randomly-deleting-files-6-month-project-wiped-out/173688",
+    "type": "user_report_forum",
+    "publisher": "Cursor Community Forum",
+    "date": "2026-10-03"
   }
 ]

@@ -49,3 +49,23 @@ AASIC is designed to be cross-walked rather than replaced by external taxonomies
 - Chain-of-thought is not ground truth for belief.
 - Multiple actions in one causal episode are not counted as multiple independent incidents.
 - A provider's self-assessment is evidence, but not independent corroboration.
+
+
+## Extended effect characterization (v0.5)
+
+The original required coding remains:
+
+`Attempt → Boundary Crossing → Effect → Harm`
+
+When public evidence supports greater granularity, AASIC can additionally code:
+
+`Attempt → Boundary Crossing → Observable Action → External Effect → Impact → Harm`
+
+The extension is optional. AASIC does not infer missing stages from plausibility.
+In particular, external traffic is not automatically compromise, exposure to a
+third-party service does not prove unrelated third-party viewing, and a
+misconfigured evaluation environment is not equivalent to a model exploiting
+the sandbox itself.
+
+Human-directed malicious use of agentic tools is documented separately from
+autonomous/misaligned-agent incidents.

@@ -1,0 +1,58 @@
+{
+  "id": "AASIC-020",
+  "slug": "openai-medicare-australia",
+  "title": "OpenAI agent gains unauthorized access to Australia's Medicare Statistics Reporting Service",
+  "event_date": "2026-06",
+  "disclosure_date": "2026-09-24/28",
+  "record_class": "confirmed_real_world",
+  "provider": "OpenAI",
+  "agent": "OpenAI research model/agent",
+  "context": "internal training and evaluation with real Internet access",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "unauthorized access to public and non-public statistical files; no personal information believed accessed at disclosure time",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "During internal training/evaluation in June 2026, an OpenAI agent requested information from the Medicare Statistics Reporting Service, was denied, and then obtained unauthorized access to the portal. Australian officials state that both public and non-public files were accessed. OpenAI publicly apologized and described the activity as unauthorized.",
+  "confirmed": [
+    "Australian government officials publicly confirmed unauthorized access to the Medicare Statistics Reporting Service Portal.",
+    "The agent accessed both public and non-public files.",
+    "No personal information was believed to have been accessed at the time of disclosure.",
+    "OpenAI acknowledged that its models accessed Australian government websites in ways they were not authorized to."
+  ],
+  "unresolved": [
+    "The complete technical execution path and exploit chain have not been publicly disclosed.",
+    "The Australian forensic investigation was ongoing at the time of this corpus cutoff.",
+    "Exact model identity and run-level transcript are not public."
+  ],
+  "sources": [
+    {
+      "url": "https://www.pm.gov.au/media/press-conference-new-york",
+      "type": "primary_government",
+      "publisher": "Prime Minister of Australia",
+      "date": "2026-09-24"
+    },
+    {
+      "url": "https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney",
+      "type": "primary_government",
+      "publisher": "Australian Government / Defence Ministers",
+      "date": "2026-09-24"
+    },
+    {
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "type": "primary_provider",
+      "publisher": "OpenAI",
+      "date": "2026-09-28"
+    }
+  ],
+  "research_tags": [
+    "government",
+    "unauthorized_access",
+    "external_effect",
+    "effect_oracle",
+    "attribution",
+    "incident_response"
+  ]
+}

@@ -4,8 +4,8 @@ Evidence-bounded research corpus for documented security-relevant actions by LLM
 
 **Dataset name:** AASIC — Agentic AI Security Incident Corpus  
 **Repository:** `agentic-ai-security-incidents`  
-**Version:** v0.3-research  
-**Cutoff:** 2026-10-02
+**Version:** v0.5-research
+**Cutoff:** 2026-10-08
 
 ## Why this exists
 
@@ -13,7 +13,7 @@ Headlines frequently collapse very different phenomena into “rogue AI”: prod
 
 ## Current corpus
 
-The current research pass contains 22 structured records:
+The current research pass contains 26 structured records:
 - confirmed real-world incidents and real external effects,
 - partially attributed real-world activity,
 - controlled boundary crossings,
@@ -37,6 +37,7 @@ The number of records is **not** an incident prevalence estimate.
 - `data/discovery_screening.csv` — inclusion/exclusion and pending-corroboration log
 - `docs/research-mapping.md` — mapping to our papers and TCC
 - `sources/` — source manifest
+- `related-events/` — security-relevant agent use intentionally kept outside the primary rogue/misalignment corpus
 - `scripts/` — validation utilities
 
 ## Scientific caution
@@ -62,3 +63,31 @@ Every structured AASIC record has a standalone report under `reports/`. These re
 - `reports/` = human-readable technical dossier;
 - `data/` = canonical machine-readable source;
 - `dashboard/` = visual exploration layer.
+
+
+## Website / GitHub Pages
+
+The repository also contains a static research website under `site/`. It provides an incident explorer, timeline, independent HTML reports, methodology, research context, and a source index.
+
+After GitHub Pages is enabled with **Source: GitHub Actions**, pushes that modify `site/` deploy automatically through `.github/workflows/pages.yml`.
+
+Expected public URL:
+
+`https://ufamlas.github.io/agentic-ai-security-incidents/`
+
+The website is a presentation layer. The canonical source of truth remains the structured records under `data/` and the evidence documentation under `cases/` and `reports/`.
+
+
+## v0.5 effect characterization
+
+AASIC retains the legacy chain for backward compatibility:
+
+`attempt → boundary_crossing → effect → harm`
+
+Where evidence permits, newer records can additionally encode:
+
+`attempt → boundary crossing → observable action → external effect → impact → harm`
+
+The finer fields are optional. Missing stages are not inferred merely to complete the chain.
+
+Human-directed malicious use of agents is documented under `related-events/` and is not silently mixed into the primary autonomous/misaligned-agent corpus.

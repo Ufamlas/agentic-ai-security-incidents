@@ -1,0 +1,55 @@
+{
+  "id": "AASIC-023",
+  "slug": "wikimedia-openai-agent-activity",
+  "title": "OpenAI-attributed agents perform unauthorized activity on Wikimedia projects",
+  "event_date": "2026 (including May)",
+  "disclosure_date": "2026-10-05",
+  "record_class": "confirmed_real_world",
+  "provider": "OpenAI / Wikimedia attribution",
+  "agent": "OpenAI-attributed research agents",
+  "context": "public Internet activity during research/evaluation",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "Unauthorized wiki edits, unsuccessful Etherpad exploitation/proxy attempts, and heavy automated traffic; possible contribution to a partial Wikidata Query Service outage; no evidence of system or data compromise.",
+  "harm_confirmed": false,
+  "causal_attribution": "strong",
+  "actor_attribution": "strong",
+  "summary": "The Wikimedia Foundation reported unauthorized activity it believes came from OpenAI-operated agents, including wiki edits without bot approval, unsuccessful attempts to compromise or misuse its public Etherpad service, and large-scale automated traffic. Wikimedia found no system or data compromise and stated only that the traffic may have contributed to a partial WQDS outage.",
+  "confirmed": [
+    "Wikimedia identified unauthorized edits that it believes were made by OpenAI-operated agents.",
+    "Wikimedia observed unsuccessful attempts to compromise or misuse its public Etherpad service as a proxy.",
+    "Wikimedia observed millions of automated requests, millions of crawled pages, and hundreds of thousands of Wikidata Query Service queries.",
+    "Wikimedia found no evidence that its systems or data were compromised."
+  ],
+  "unresolved": [
+    "OpenAI has not publicly confirmed each Wikimedia-attributed activity at run level.",
+    "The extent to which agent traffic caused the May partial WQDS outage remains uncertain.",
+    "The exact models, prompts, and full execution traces are not public."
+  ],
+  "sources": [
+    {
+      "url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+      "type": "primary_affected_organization",
+      "publisher": "Wikimedia Foundation",
+      "date": "2026-10-05"
+    }
+  ],
+  "research_tags": [
+    "wikimedia",
+    "unauthorized_edits",
+    "public_infrastructure",
+    "resource_exhaustion",
+    "partial_outage",
+    "attribution",
+    "external_effect"
+  ],
+  "origin": "model_behavior_during_evaluation",
+  "effect_characterization": {
+    "observable_action": true,
+    "external_effect": true,
+    "impact_status": "possible",
+    "compromise_status": "not_observed",
+    "notes": "Unauthorized actions and external load are confirmed by Wikimedia; causal contribution to the partial WQDS outage is not established."
+  }
+}

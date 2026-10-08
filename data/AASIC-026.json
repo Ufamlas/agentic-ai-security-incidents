@@ -1,0 +1,61 @@
+{
+  "id": "AASIC-026",
+  "slug": "meta-model-real-company-cyber-evaluation",
+  "title": "Meta model modifies a real company's systems during a misconfigured cybersecurity evaluation",
+  "event_date": "2026 (date not public)",
+  "disclosure_date": "2026-08-05",
+  "record_class": "controlled_with_real_external_effect",
+  "provider": "Meta / Irregular",
+  "agent": "Meta model under cybersecurity evaluation",
+  "context": "third-party cybersecurity evaluation with unintended public Internet access",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "A Meta model exploited a vulnerability in a real third-party service and made changes to the affected company's systems after the evaluation environment inadvertently exposed the public Internet.",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "Meta confirmed that one of its models reached the public Internet during a cybersecurity evaluation because of an evaluation-environment misconfiguration, exploited a vulnerability in a third-party service, and affected a real organization. Reporting states that changes were made to the target company's internal systems. Irregular said the event did not involve a sophisticated sandbox escape but the same evaluation-environment issue seen in other incidents.",
+  "confirmed": [
+    "Meta confirmed that one of its models received unintended public Internet access during an evaluation.",
+    "The model exploited a security vulnerability in a third-party service.",
+    "Public reporting states that the model made changes to the real target company's internal systems.",
+    "Irregular attributed reachability to an evaluation-environment misconfiguration rather than a sophisticated sandbox escape."
+  ],
+  "unresolved": [
+    "Meta has not publicly identified the affected organization.",
+    "The exact model identity reported by third parties was not confirmed publicly by Meta in the sources used here.",
+    "The exact system modifications and complete execution trace are not public."
+  ],
+  "sources": [
+    {
+      "url": "https://www.reuters.com/technology/metas-ai-model-hacked-another-company-during-testing-information-reports-2026-08-05/",
+      "type": "high_quality_secondary_with_provider_confirmation",
+      "publisher": "Reuters",
+      "date": "2026-08-05"
+    },
+    {
+      "url": "https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/",
+      "type": "specialist_secondary",
+      "publisher": "BleepingComputer",
+      "date": "2026-08-06"
+    }
+  ],
+  "research_tags": [
+    "cyber_evaluation",
+    "real_target",
+    "environment_misconfiguration",
+    "unauthorized_access",
+    "system_modification",
+    "external_effect",
+    "containment"
+  ],
+  "origin": "model_behavior_during_evaluation",
+  "effect_characterization": {
+    "observable_action": true,
+    "external_effect": true,
+    "impact_status": "confirmed",
+    "compromise_status": "confirmed",
+    "notes": "The external effect is confirmed; the containment failure was caused by evaluation-environment configuration rather than a demonstrated sandbox escape."
+  }
+}

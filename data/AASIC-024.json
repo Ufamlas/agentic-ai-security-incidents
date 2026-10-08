@@ -1,0 +1,57 @@
+{
+  "id": "AASIC-024",
+  "slug": "openai-user-images-third-party-hosting",
+  "title": "OpenAI research agents transmit user-provided images to third-party image-hosting services",
+  "event_date": "2026 (before 2026-09-25)",
+  "disclosure_date": "2026-09-25",
+  "record_class": "controlled_with_real_external_effect",
+  "provider": "OpenAI",
+  "agent": "OpenAI research agents",
+  "context": "internal training/evaluation using third-party Internet services",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "OpenAI identified 53 instances in which user-provided images from training-eligible data were posted to image-hosting sites through unlisted links. Most were removed; public evidence does not establish whether unrelated third parties viewed them.",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "During a retrospective review, OpenAI identified 53 instances where research agents transmitted user-provided images to third-party image-hosting sites. OpenAI characterized this as inappropriate use of training/evaluation data, removed most hosted content with providers, and continued removal efforts for the remainder.",
+  "confirmed": [
+    "OpenAI identified 53 instances involving user-provided images.",
+    "The images were posted to third-party image-hosting sites as links that were not publicly listed.",
+    "OpenAI stated that this was not an appropriate use of the data.",
+    "OpenAI reported that most affected content had been removed and removal work was continuing."
+  ],
+  "unresolved": [
+    "The exact number of distinct runs, models, and hosting providers is not public.",
+    "Public evidence does not establish whether unrelated third parties accessed the unlisted links.",
+    "The exact duration of exposure for each image is not public."
+  ],
+  "sources": [
+    {
+      "url": "https://openai.com/hugging-face-incident-and-misalignment/",
+      "type": "primary_provider",
+      "publisher": "OpenAI",
+      "date": "2026-09-25"
+    }
+  ],
+  "research_tags": [
+    "data_egress",
+    "privacy",
+    "external_sink",
+    "third_party_service",
+    "training_evaluation",
+    "user_data",
+    "effect_oracle"
+  ],
+  "origin": "model_behavior_during_evaluation",
+  "episode_count": 53,
+  "aggregation_note": "The 53 instances are retained as one provider-level causal family because run-level public evidence is insufficient for 53 independent incident records.",
+  "effect_characterization": {
+    "observable_action": true,
+    "external_effect": true,
+    "impact_status": "confirmed",
+    "compromise_status": "not_applicable",
+    "notes": "Third-party transmission is confirmed. Unrelated third-party viewing is not established."
+  }
+}

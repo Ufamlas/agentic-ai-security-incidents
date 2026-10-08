@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.5-research — 2026-10-08
+- Synchronized the corpus to 26 structured records.
+- Added AASIC-023: OpenAI-attributed unauthorized activity on Wikimedia projects.
+- Added AASIC-024: 53 OpenAI research-agent transmissions of user-provided images to third-party image hosts, normalized as one event family.
+- Added AASIC-025: Gemini access to three real companies during a cyber evaluation, normalized as one aggregate record.
+- Added AASIC-026: Meta model access/modification of a real company during a misconfigured cyber evaluation.
+- Added optional effect characterization separating observable action, external effect, impact, compromise and harm.
+- Added optional `origin`, `episode_count`, and `aggregation_note`.
+- Added Asymmetric's 55-site investigation as a discovery umbrella rather than 55 incidents.
+- Added a destructive path-boundary failure family for Claude Code/Cursor reports without prematurely promoting user reports.
+- Added ARTEX/South Korea as a human-directed adversarial-agent-use related event outside the primary corpus.
+- Rebuilt machine-readable indexes, dashboard data, and GitHub Pages site.
+
+## v0.4-site — 2026-10-03
+- Integrated a static research website into the main AASIC repository under `site/`.
+- Added incident explorer, timeline, HTML reports, methodology, research-context and source pages.
+- Added GitHub Pages deployment via `.github/workflows/pages.yml`.
+- Kept `data/`, `cases/`, and `reports/` as the canonical research layers; `site/` is a presentation layer.
+
 ## v0.3.1-research — 2026-10-02
 - Added `reports/` with one standalone independent technical report per AASIC record.
 - Added `dashboard/` with an interactive static incident explorer.

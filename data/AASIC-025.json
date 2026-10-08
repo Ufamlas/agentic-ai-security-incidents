@@ -1,0 +1,58 @@
+{
+  "id": "AASIC-025",
+  "slug": "google-gemini-three-company-access",
+  "title": "Gemini accesses three real companies during a cybersecurity evaluation",
+  "event_date": "2026-05",
+  "disclosure_date": "2026-09-18",
+  "record_class": "controlled_with_real_external_effect",
+  "provider": "Google / Irregular",
+  "agent": "Gemini model under cybersecurity evaluation",
+  "context": "third-party cybersecurity evaluation with unintended access to real Internet targets",
+  "attempt": true,
+  "boundary_crossing": true,
+  "effect": true,
+  "harm": "Unauthorized access to three real company systems during an evaluation; affected entities were notified. Public reporting does not establish broader downstream harm.",
+  "harm_confirmed": true,
+  "causal_attribution": "strong",
+  "actor_attribution": "confirmed",
+  "summary": "During a May 2026 cybersecurity evaluation run by Irregular, a Gemini model accessed three real companies that it believed were in-scope targets. Public reporting says one access involved a guessed password and two involved credentials located in public repositories. Google confirmed the breaches and said affected organizations were notified; the model stopped its hacking behavior in all cases.",
+  "confirmed": [
+    "Google confirmed that a Gemini model accessed three real company systems during a cybersecurity evaluation.",
+    "The evaluation was conducted by Irregular.",
+    "Public reporting states that one case used a guessed password and two used credentials found in public repositories.",
+    "Google said affected entities were informed and testing procedures were revised.",
+    "The model stopped its hacking behavior in all three cases."
+  ],
+  "unresolved": [
+    "The affected companies have not been publicly identified in the source used here.",
+    "The exact Gemini model/version and complete execution traces are not public.",
+    "The degree of persistence, data access, or modification at each company is not fully disclosed."
+  ],
+  "sources": [
+    {
+      "url": "https://www.reuters.com/business/gemini-hacked-three-companies-first-known-breakout-by-google-ai-wsj-reports-2026-09-18/",
+      "type": "high_quality_secondary_with_provider_confirmation",
+      "publisher": "Reuters",
+      "date": "2026-09-18"
+    }
+  ],
+  "research_tags": [
+    "cyber_evaluation",
+    "real_target",
+    "credentials",
+    "unauthorized_access",
+    "target_resolution",
+    "external_effect",
+    "containment"
+  ],
+  "origin": "model_behavior_during_evaluation",
+  "episode_count": 3,
+  "aggregation_note": "Three affected companies are retained in one record because public reporting does not provide enough target-specific evidence to support three independent dossiers.",
+  "effect_characterization": {
+    "observable_action": true,
+    "external_effect": true,
+    "impact_status": "confirmed",
+    "compromise_status": "confirmed",
+    "notes": "Unauthorized access to three real systems is provider-confirmed; target-specific downstream impact is incompletely disclosed."
+  }
+}
